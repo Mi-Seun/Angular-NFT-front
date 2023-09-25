@@ -1,0 +1,19 @@
+<p>nft-list works!</p>
+<div class="card-group">
+    <div *ngFor="let nft of nftList">
+        <div class="card" style="width: 18rem;">
+        <img src="{{ nft.pathURL }}" class="card-img-top" alt="NFT Image">
+        <div class="card-body">
+            <h5 class="card-title"> Nom : {{ nft.nameNft }}</h5>
+            <p class="card-text">Prix ETH : {{ nft.priceEth }}</p>
+            <a routerLink="/nft-detail/{{nft.id}} " class="btn btn-primary">Voir plus...</a>
+            <h5 class="card-title text-center"></h5>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

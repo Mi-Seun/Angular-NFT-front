@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { nftTypeOfClass } from '../../../interface/nft.interface';
 import { ActivatedRoute } from '@angular/router';
-import { NftService } from '../../../services/nft.service/nft.service';
+import { nftTypeOfClass } from 'src/app/interface/nft.interface';
+import { NftService } from 'src/app/services/nft.service/nft.service';
 
 @Component({
-  selector: 'app-nft-detail',
-  templateUrl: './nft-detail.component.html',
-  styleUrls: ['./nft-detail.component.css']
+  selector: 'app-nft-list',
+  templateUrl: './nft-list.component.html',
+  styleUrls: ['./nft-list.component.css']
 })
-export class NftDetailComponent  {
+export class NftListComponent implements OnInit {
+
   nft: nftTypeOfClass | undefined;
   nftList: nftTypeOfClass[] = [];
   nftSelect: nftTypeOfClass | undefined;
@@ -28,7 +29,7 @@ export class NftDetailComponent  {
   getAllNft() {
     this.nftService.getNfts().subscribe(
       (nftListResult :nftTypeOfClass[] )  =>
-    {
+     {
       for(let i = 0 ; i < nftListResult.length ; i++) {
       nftListResult[i].pathURL = "https://127.0.0.1:8000/upload/"+ nftListResult[i].pathURL;
     }

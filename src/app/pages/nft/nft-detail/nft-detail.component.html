@@ -1,24 +1,29 @@
 <p>nft-detail works!</p>
-
-    <div class="container">
-        <div class="row">        
-            <div class="card d-flex justify-content-center">
-                <div class="text-center">
-                    <div *ngIf="nft">
-                    <div class="col md-6 xs-12">
-                        <img src="{{nft.pathURL}}" style="width: 200px; height: 200px" alt="">
-                    </div>
-                        <div class="col md-6 xs-12">
-                            <h4>Nom : {{nft.nameNFT}} </h4>
-                            <p>Id: {{nft.id}}</p>
-                            <p>Description: {{nft.description}}</p>
-                            <p>Prix de ETH : {{nft.priceEth}}</p>
-                        </div>
-                    </div> 
-                </div>
-            </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="card d-flex justify-content-center">
+        <div class="text-center">
+          <div *ngIf="nft">
+            <img [src]="nft.pathURL" style="width: 50%; height: 10%" alt="">
+          </div>
         </div>
+      </div>
     </div>
-
-
+    <div class="col-md-5">
+      <div class="card d-flex justify-content-center">
+        <div class="text-center">
+          <div *ngIf="nft">
+            <h1>Nom : {{ nft.nameNft }}</h1>
+            <p>Prix de ETH : {{ nft.priceEth }}</p>
+            <h5>{{ nft.description }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div>
+      <h5>Chart graphique</h5>
+    </div>
+</div>
 

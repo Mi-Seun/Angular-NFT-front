@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { nftTypeOfClass } from '../../../services/nft.service/nft.interface';
+import { nftTypeOfClass } from '../../../interface/nft.interface';
 import { NftService } from '../../../services/nft.service/nft.service';
 import { ActivatedRoute } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';

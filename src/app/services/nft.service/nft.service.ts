@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { nftTypeOfClass } from './nft.interface';
+import { nftTypeOfClass } from '../../interface/nft.interface';
 
 @Injectable({
   providedIn: 'root'

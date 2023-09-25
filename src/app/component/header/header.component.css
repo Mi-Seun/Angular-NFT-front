@@ -1,0 +1,8 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+.sous-category {
+    font-size: 14px; /* 원하는 글꼴 크기로 조정 */
+    color: #888; /* 원하는 글꼴 색상으로 조정 */
+    margin-top: 3px; /* "sous-category"와 상위 버튼 사이의 간격을 조정 */
+  }
+

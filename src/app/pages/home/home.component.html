@@ -1,21 +1,6 @@
+<main class="bg-primary-subtle vh-100">
+  <h1 class="mb-5 text-center">Bienvenu chez NFT de Mi-Sun</h1>
+    <app-category-list></app-category-list>
+    <app-nft-detail></app-nft-detail>
 
-
-<p>home works!</p>
-
-<div class="card-group">
-  <div *ngFor="let nft of nftList">
-    <div class="card" style="width: 18rem;">
-      <img src="{{ nft.pathURL }}" class="card-img-top" alt="NFT Image">
-      <div class="card-body">
-        <h5 class="card-title"> Nom : {{ nft.nameNFT }}</h5>
-        <p class="card-text">Prix ETH : {{ nft.priceEth }}</p>
-        <a routerLink="/detail/{{nft.id}} " class="btn btn-primary">Detail</a>
-        <h5 class="card-title text-center"></h5>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
+  </main>
