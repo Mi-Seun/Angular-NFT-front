@@ -29,13 +29,21 @@ export class NftListComponent implements OnInit {
   getAllNft() {
     this.nftService.getNfts().subscribe(
       (nftListResult :nftTypeOfClass[] )  =>
-     {
+    {
       for(let i = 0 ; i < nftListResult.length ; i++) {
       nftListResult[i].pathURL = "https://127.0.0.1:8000/upload/"+ nftListResult[i].pathURL;
     }
     this.nftList = nftListResult;
 
   });
+  }
+
+  getAllCategory(){
+    
+  }
+
+  getNftByCategory(){
+
   }
 
   viewOneNft(id: number) {

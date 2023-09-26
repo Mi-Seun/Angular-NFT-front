@@ -6,10 +6,7 @@ export interface userTypeOfClass {
     lastName?: string
 }
 
-export interface ErrorNft {
-    "error": string | undefined;
-    "true": string | undefined;
-}
+
 
 // {
 

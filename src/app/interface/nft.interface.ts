@@ -8,10 +8,7 @@ export interface nftTypeOfClass {
     // subCategories:[],
 }
 
-export interface ErrorNft {
-    "error": string | undefined;
-    "true": string | undefined;
-}
+
 
 /*
 {

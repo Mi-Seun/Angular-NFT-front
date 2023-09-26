@@ -1,16 +1,10 @@
-export interface CategoryInterface {
+export interface CategoryTypeOfClass {
 
     "id": number;
     "nameCategory": string;
-    "subCategories": [];
 }
 
-export interface ErrorCategory {
-    "error": string | undefined;
-    "true": string | undefined;
-    
 
-}
 /*
 
 {"id":6,

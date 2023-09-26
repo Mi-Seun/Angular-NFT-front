@@ -18,6 +18,7 @@ import { NftListComponent } from './pages/nft/nft-list/nft-list.component';
 import { CategoryDetailComponent } from './pages/category/category-detail/category-detail.component';
 import { UserListComponent } from './pages/user/user-list/user-list.component';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { SubCategoryListComponent } from './pages/sub-category/sub-category-list/sub-category-list.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
     CategoryDetailComponent,
     UserListComponent,
     SidebarComponent,
+    SubCategoryListComponent,
   ],
   imports: [
     BrowserModule,
