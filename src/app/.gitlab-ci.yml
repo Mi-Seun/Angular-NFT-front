@@ -6,16 +6,14 @@ build de la partie client:
   image: node:18
   stage: build
   script:
-    - cd client
     - npm install --production
     - npm run build
   artifacts:
     paths:
-      - client/build/
+      - dist/nft-app/
 
 deploiement de la partie client:
   image: pockost/phploy:4.9.3
   stage: deploy
   script:
     - phploy -s client-prod
-    
