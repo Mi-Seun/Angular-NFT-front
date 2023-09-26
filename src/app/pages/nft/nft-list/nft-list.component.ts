@@ -38,14 +38,6 @@ export class NftListComponent implements OnInit {
   });
   }
 
-  getAllCategory(){
-    
-  }
-
-  getNftByCategory(){
-
-  }
-
   viewOneNft(id: number) {
     this.nftService.getNftById(id).subscribe(nftResult => {
       this.nftSelect = nftResult;

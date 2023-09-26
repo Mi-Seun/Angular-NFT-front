@@ -4,8 +4,8 @@ export interface nftTypeOfClass {
     description?: string,
     pathURL?: string,
     priceEth?: number,
-    // user:[],
-    // subCategories:[],
+    user:[],
+    subCategories:[],
 }
 
 

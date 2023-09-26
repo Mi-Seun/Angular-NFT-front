@@ -18,8 +18,12 @@ const routes: Routes = [
   {path: 'creat/:id', component: NftCreatComponent},
   {path: 'category-list', component: CategoryListComponent},
   {path: 'category-list/:id', component: CategoryListComponent},
+  {path: 'category-detail', component: CategoryListComponent},
+  {path: 'category-detail/:id', component: CategoryListComponent},
   {path: 'user-list', component: UserListComponent},
   {path: 'user-list/:id', component: UserListComponent},
+  {path: 'user-detail', component: UserListComponent},
+  {path: 'user-detail/:id', component: UserListComponent},
   
   {path: '**', component: Error404Component}
 
