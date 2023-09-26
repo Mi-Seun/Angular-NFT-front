@@ -1,0 +1,19 @@
+stages:
+  - build
+  - deploy
+
+build website:
+  stage: build
+  image: node:18
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/nft-app
+
+deploy website:
+  stage: deploy
+  image: pockost/phploy:4.9.3
+  script:
+    - phploy -s client-prod
