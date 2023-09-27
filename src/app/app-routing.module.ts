@@ -20,6 +20,8 @@ const routes: Routes = [
   {path: 'category-list/:id', component: CategoryListComponent},
   {path: 'category-detail', component: CategoryListComponent},
   {path: 'category-detail/:id', component: CategoryListComponent},
+  {path: 'subCategory-list', component: CategoryListComponent},
+  {path: 'subCategory-list/:id', component: CategoryListComponent},
   {path: 'user-list', component: UserListComponent},
   {path: 'user-list/:id', component: UserListComponent},
   {path: 'user-detail', component: UserListComponent},

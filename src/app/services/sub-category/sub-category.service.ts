@@ -20,9 +20,9 @@ export class SubCategoryService {
     return this.http.get<SubCategoryTypeOfClass>(`${this.url}/${id}`); 
   }
 
-  add(SubCategory: SubCategoryTypeOfClass): Observable<SubCategoryTypeOfClass> {
+  add(subCategory: SubCategoryTypeOfClass): Observable<SubCategoryTypeOfClass> {
     
-    return this.http.post<SubCategoryTypeOfClass>("https://127.0.0.1:8000/api/new", SubCategory)
+    return this.http.post<SubCategoryTypeOfClass>("https://127.0.0.1:8000/api/new", subCategory)
       .pipe(
         catchError((error: any) => {
           console.error('Error:', error);
@@ -31,7 +31,7 @@ export class SubCategoryService {
       );
   }
 
-  deleteSubCategoryy(id: number){
+  deleteCategory(id: number){
     return this.http.delete<SubCategoryTypeOfClass>(`${this.url}/${id}`);
   }
 
