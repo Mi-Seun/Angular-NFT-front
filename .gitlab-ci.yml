@@ -12,10 +12,8 @@ build website:
     paths:
       - dist/nft-app
 
-deploy angular:
+deploy website:
   stage: deploy
-  image:
-    name: pockost/phploy:4.9.3
-    entrypoint: [""]
+  image: pockost/phploy:4.9.3
   script:
-    - phploy -s prod
+    - phploy -s client-prod
