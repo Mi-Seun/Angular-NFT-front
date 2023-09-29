@@ -13,7 +13,9 @@ build de la partie client:
       - dist/nft-app/
 
 deploiement de la partie client:
-  image: pockost/phploy:4.9.3
+  image: 
+    name: pockost/phploy:4.9.3
+    entrypoint: [""]
   stage: deploy
   script:
     - phploy -s client-prod
