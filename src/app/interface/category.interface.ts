@@ -1,7 +1,6 @@
 export interface CategoryTypeOfClass {
-
-    "id": number;
-    "nameCategory": string;
+    id: number;
+    nameCategory: string;
 }
 
 

@@ -3,9 +3,14 @@ export interface userTypeOfClass {
     email?: string,
     roles?:[],
     firstName?: string,
-    lastName?: string
-}
+    lastName?: string,
+    numberAddress?: string,
+    nameAddress?: string,
+    complementAddress?: string,
+    city?: string,
 
+
+}
 
 
 // {

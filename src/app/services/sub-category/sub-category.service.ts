@@ -8,7 +8,7 @@ import { SubCategoryTypeOfClass } from 'src/app/interface/sub-category.interface
 })
 export class SubCategoryService {
 
-  url = 'https://127.0.0.1:8000/api/sub-category';
+  url = 'https://127.0.0.1:8000/api/sub_category';
 
   constructor(private http: HttpClient) { }
 

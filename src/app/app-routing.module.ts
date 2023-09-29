@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { Error404Component } from './pages/error404/error404.component';
+import { NftListComponent } from './pages/nft/nft-list/nft-list.component';
 import { NftDetailComponent } from './pages/nft/nft-detail/nft-detail.component';
 import { NftCreatComponent } from './pages/nft/nft-creat/nft-creat.component';
-import { Error404Component } from './pages/error404/error404.component';
 import { CategoryListComponent } from './pages/category/category-list/category-list.component';
 import { UserListComponent } from './pages/user/user-list/user-list.component';
-import { NftListComponent } from './pages/nft/nft-list/nft-list.component';
+import { SubCategoryListComponent } from './pages/sub-category/sub-category-list/sub-category-list.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -20,8 +21,8 @@ const routes: Routes = [
   {path: 'category-list/:id', component: CategoryListComponent},
   {path: 'category-detail', component: CategoryListComponent},
   {path: 'category-detail/:id', component: CategoryListComponent},
-  {path: 'subCategory-list', component: CategoryListComponent},
-  {path: 'subCategory-list/:id', component: CategoryListComponent},
+  {path: 'sub-category-list', component: SubCategoryListComponent},
+  {path: 'sub-category-list/:id', component: SubCategoryListComponent},
   {path: 'user-list', component: UserListComponent},
   {path: 'user-list/:id', component: UserListComponent},
   {path: 'user-detail', component: UserListComponent},

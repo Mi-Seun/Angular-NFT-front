@@ -1,3 +1,56 @@
+<div class="bg-primary-subtle vh-100">
+    <h1 class="text-center">Sous-categories</h1>
+    <div class="row border-b-2 brc-default-l2">
+        <div class="table-responsive">
+        <table class="table table-striped table-borderless border-0 border-b-2 brc-default-l1">
+            <thead class="bg-none bgc-default-tp1">
+            <tr class="text-white">
+                <th class="opacity-2">ID</th>
+                <th>Nom de sous-catégory</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let category of categoryList">
+                <td class="opacity-2">{{ category.id }}</td>
+                <td>{{ category.nameCategory }}</td>
+                <a [routerLink]="['/sub-category-list', category.id]" class="btn btn-primary">Voir sous-category</a>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--
+<section>
+<div class="container">
+    <div class="text-center margin-40px-bottom">
+    <h3 class="no-margin-bottom">Toutes les catégories</h3>
+    </div>
+    <div class="row">
+    <div class="col-lg-3 sm-margin-30px-bottom" *ngFor="let category of categoryList">
+        <div class="h-100">
+        <a [routerLink]="['/category-list', category.id]" class="card bg-img box-hover cover-background border-0 p-4 h-100" [style.background-image]="'url(' + category.imageUrl + ')'">
+            <div class="mt-auto position-relative z-index-9">
+            <h5 class="text-white">{{ category.nameCategory }}</h5>
+            <a [routerLink]="['/sub-category-list', category.id]" class="btn btn-primary">Voir sous-category</a>
+
+            </div>
+        </a>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+
+
+
+
 <section>
     <div class="container">
         <div class="text-center margin-40px-bottom">
@@ -66,3 +119,5 @@
 
 
 
+
+-->

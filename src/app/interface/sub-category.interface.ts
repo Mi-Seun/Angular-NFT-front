@@ -1,4 +1,7 @@
+import { CategoryTypeOfClass } from './category.interface';
+
 export interface SubCategoryTypeOfClass {
-    id: number,
-    nameSubcategory: string
+    id: number;
+    nameSubCategory: string;
+    category: CategoryTypeOfClass;
 }
