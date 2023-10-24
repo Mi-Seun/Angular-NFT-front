@@ -13,11 +13,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let subCategory of subCategoryList">
+            <tr *ngFor="let subCategory of subcategoryList">
                 <td class="opacity-2">{{ subCategory.id }}</td>
-                <td>{{ subCategory.nameSubCategory }}</td>
+                <td>{{ subCategory.name_sc }}</td>
                 <td>
-                <a [routerLink]="['/category-list', subCategory.category.id]" class="btn btn-primary">Voir category</a>
+                <a [routerLink]="['/category-list', subCategory.id]" class="btn btn-primary">Voir category</a>
                 </td>
             </tr>
             </tbody>

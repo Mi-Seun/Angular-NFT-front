@@ -8,13 +8,13 @@ import { SubCategoryService } from 'src/app/services/sub-category/sub-category.s
   templateUrl: './sub-category-list.component.html',
   styleUrls: ['./sub-category-list.component.css']
 })
-export class SubCategoryListComponent {
+export class SubcategoryListComponent {
 
-  constructor(private subCategoryService: SubCategoryService, private route: ActivatedRoute) { }
+  constructor(private subcategoryService: SubCategoryService, private route: ActivatedRoute) { }
 
-  subCategory: SubCategoryTypeOfClass | undefined;
-  subCategoryList: SubCategoryTypeOfClass[] = [];
-  subCategorySelect: SubCategoryTypeOfClass | undefined;
+  subcategory: SubCategoryTypeOfClass | undefined;
+  subcategoryList: SubCategoryTypeOfClass[] = [];
+  subcategorySelect: SubCategoryTypeOfClass | undefined;
 
 
 
@@ -22,33 +22,33 @@ export class SubCategoryListComponent {
     this.getAllSubCategories();
 
     this.route.params.subscribe(params => {
-      const subCategoryId = +params['id'];
-      this.getSubCategoryById(subCategoryId);
+      const subcategoryId = +params['id'];
+      this.getSubcategoryById(subcategoryId);
     });
   }
 
   getAllSubCategories() {
-    this.subCategoryService.getSubCategories().subscribe(
-      (subCategoryListResult :SubCategoryTypeOfClass[] )  =>
+    this.subcategoryService.getSubCategories().subscribe(
+      (subcategoryListResult :SubCategoryTypeOfClass[] )  =>
     {
-      for(let i = 0 ; i < subCategoryListResult.length ; i++) {
+      for(let i = 0 ; i < subcategoryListResult.length ; i++) {
     }
-    this.subCategoryList = subCategoryListResult;
+    this.subcategoryList = subcategoryListResult;
 
   });
   }
 
-  viewOneSubCategory(id: number) {
-    this.subCategoryService.getSubCategoryById(id).subscribe(subCategoryResult => {
-      this.subCategorySelect =subCategoryResult;
-      console.log(this.subCategorySelect);
+  viewOneSubcategory(id: number) {
+    this.subcategoryService.getSubCategoryById(id).subscribe(subcategoryResult => {
+      this.subcategorySelect =subcategoryResult;
+      console.log(this.subcategorySelect);
     });
   }
 
 
-  getSubCategoryById(id: number) {
-    this.subCategoryService.getSubCategoryById(id).subscribe(subCategoryResult => {
-    this.subCategory = subCategoryResult;
+  getSubcategoryById(id: number) {
+    this.subcategoryService.getSubCategoryById(id).subscribe(subcategoryResult => {
+    this.subcategory = subcategoryResult;
     });
   }
 }

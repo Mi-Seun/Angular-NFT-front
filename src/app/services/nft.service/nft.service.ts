@@ -16,8 +16,8 @@ export class NftService {
     return this.http.get<nftTypeOfClass[]>(this.url);
   }
 
-  getNftById(id: number): Observable<nftTypeOfClass> {
-    return this.http.get<nftTypeOfClass>(`${this.url}/${id}`); // Corrected the URL format
+  getNftById(id: string | number): Observable<nftTypeOfClass> {
+    return this.http.get<nftTypeOfClass>(`${this.url}/${id}`);
   }
 
   add(nft: nftTypeOfClass): Observable<nftTypeOfClass> {

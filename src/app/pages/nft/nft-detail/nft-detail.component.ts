@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { nftTypeOfClass } from '../../../interface/nft.interface';
 import { ActivatedRoute } from '@angular/router';
 import { NftService } from '../../../services/nft.service/nft.service';
+import { nftTypeOfClass } from 'src/app/interface/nft.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-nft-detail',
@@ -14,45 +15,50 @@ export class NftDetailComponent  {
   nftSelect: nftTypeOfClass | undefined;
 
 
-  constructor(private nftService: NftService, private route: ActivatedRoute) { }
+  constructor(private nftService: NftService, private route: ActivatedRoute , private http :HttpClient) { }
+
+  nftId : string ;
 
   ngOnInit() {
-    this.getAllNft();
-
-    this.route.params.subscribe(params => {
-      const nftId = +params['id'];
-      this.getNftById(nftId);
-    });
+    this.getId();
+    this.getNft();
+ 
   }
 
-  getAllNft() {
-    this.nftService.getNfts().subscribe(
-      (nftListResult :nftTypeOfClass[] )  =>
-    {
-      for(let i = 0 ; i < nftListResult.length ; i++) {
-      nftListResult[i].pathURL = "https://127.0.0.1:8000/upload/"+ nftListResult[i].pathURL;
-    }
-    this.nftList = nftListResult;
+  getId(){
+      this.route.queryParams.subscribe(
+        params =>{
+          this.nftId = params["id"];
+        }
+      )
+  }
 
+  getNft(){
+    let url = `https://127.0.0.1:8000/api/nft/${this.nftId}`;
+
+    this.http.get<nftTypeOfClass>(url).subscribe(
+      (data: nftTypeOfClass) => {
+        this.nft = data;
+        this.nft.pathurl = "https://127.0.0.1:8000/upload/"+data.pathurl;
+        
   });
-  }
-
-  viewOneNft(id: number) {
-    this.nftService.getNftById(id).subscribe(nftResult => {
-      this.nftSelect = nftResult;
-      console.log(this.nftSelect);
-    });
-  }
 
 
-  getNftById(id: number) {
-    this.nftService.getNftById(id).subscribe(nftResult => {
-      nftResult.pathURL = "https://127.0.0.1:8000/upload/"+nftResult.pathURL;
-      this.nft = nftResult;
-    });
-  }
+  // viewOneNft(id : number) {
+  //   this.nftService.getNftById(id).subscribe(nftResult => {
+  //     this.nft = nftResult;
+  //     console.log(nftResult);
+  //   });
+  // }
+
+  // getNftById() {
+  //   this.nftService.getNftById(this.nftId).subscribe(nftResult => {
+  //     nftResult.pathurl = "https://127.0.0.1:8000/upload/"+nftResult.pathurl;
+  //     this.nft = nftResult;
+  //   });
+  // }
 }
-
+}
 
 
 

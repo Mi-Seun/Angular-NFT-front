@@ -1,11 +1,10 @@
 export interface nftTypeOfClass {
     id?: number,
-    nameNft?: string,
+    name_nft?: string,
+    priceeth?: number,
+    pathurl?: string,
     description?: string,
-    pathURL?: string,
-    priceEth?: number,
-    user:[],
-    subCategories:[],
+    subcategories:[],
 }
 
 
@@ -13,12 +12,16 @@ export interface nftTypeOfClass {
 /*
 {
 
-        "id": 202,
-        "nameNFT": "koko",
-        "description": "zklfhi zuify erpgpie ryg^ergy epirgu ergp",
-        "pathURL": "/public/upload/seukeulinsyas-2023-07-20-151248-6502e228dfc23.png",
-        "priceEth": 5
+        "id": 1,
+        "name_nft": "NFT-1",
+        "priceeth": 500,
+        "pathurl": "image-2-652bcb8d0986b.webp",
+        "description": "ddfdf",
+        "subcategories": [
+              {
+                    "id": 5,
+                    "name_sc": "subcategory3"
+              }
+        ]
 
-},
-*/
-
+  */

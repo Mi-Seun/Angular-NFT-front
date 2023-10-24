@@ -5,7 +5,7 @@
       <div class="card d-flex justify-content-center">
         <div class="text-center">
           <div *ngIf="nft">
-            <img [src]="nft.pathURL" style="width: 50%; height: 10%" alt="">
+            <img [src]="nft.pathurl" style="width: 50%; height: 10%" alt="">
           </div>
         </div>
       </div>
@@ -14,16 +14,17 @@
       <div class="card d-flex justify-content-center">
         <div class="text-center">
           <div *ngIf="nft">
-            <h1>Nom : {{ nft.nameNft }}</h1>
-            <p>Prix de ETH : {{ nft.priceEth }}</p>
+            <img [src]="nft.pathurl" style="width: 50%; height: 10%" alt="">
+            <h1>Nom : {{ nft.name_nft }}</h1>
+            <p>Prix de ETH : {{ nft.priceeth }}</p>
             <h5>{{ nft.description }}</h5>
           </div>
+          
         </div>
       </div>
     </div>
   </div>
-    <div>
-      <h5>Chart graphique</h5>
-    </div>
+  <div>
+    <h5>Chart graphique</h5>
+  </div>
 </div>
-

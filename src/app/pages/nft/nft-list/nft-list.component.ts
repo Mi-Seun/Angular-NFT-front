@@ -31,7 +31,7 @@ export class NftListComponent implements OnInit {
       (nftListResult :nftTypeOfClass[] )  =>
     {
       for(let i = 0 ; i < nftListResult.length ; i++) {
-      nftListResult[i].pathURL = "https://127.0.0.1:8000/upload/"+ nftListResult[i].pathURL;
+      nftListResult[i].pathurl = "https://127.0.0.1:8000/upload/"+ nftListResult[i].pathurl;
     }
     this.nftList = nftListResult;
 
@@ -48,7 +48,7 @@ export class NftListComponent implements OnInit {
 
   getNftById(id: number) {
     this.nftService.getNftById(id).subscribe(nftResult => {
-      nftResult.pathURL = "https://127.0.0.1:8000/upload/"+nftResult.pathURL;
+      nftResult.pathurl = "https://127.0.0.1:8000/upload/"+nftResult.pathurl;
       this.nft = nftResult;
     });
   }

@@ -10,6 +10,7 @@
                     <th>First Name</th>
                     <th>Roles</th>
                     <th>Email</th>
+                    <th>Date de naissenc</th>
                     <th>Adresse</th>
                     <th>Actions</th>
                     </tr>
@@ -17,11 +18,12 @@
                 <tbody>
                     <tr *ngFor="let user of userList">
                     <td class="opacity-2">{{ user.id }}</td>
-                    <td>{{ user.lastName }}</td>
-                    <td>{{ user.firstName }}</td>
+                    <td>{{ user.lastname }}</td>
+                    <td>{{ user.firstname }}</td>
                     <td>{{ user.roles }}</td>
                     <td>{{ user.email }}</td>
-                    <td>{{ user.numberAddress }}{{ user.nameAddress }}{{ user.complementAddress }}{{ user.city }}</td>
+                    <td>{{ user.datebirth }}</td>
+                    <td>{{ user.adnum }}{{ user.adstreet }}{{ user.adcity }}{{ user.adpostalcode }}</td>
                     <td>
                         <button>Ajouter</button>
                         <button>Supprimer</button>

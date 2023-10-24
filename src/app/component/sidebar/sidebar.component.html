@@ -17,15 +17,28 @@
         </div>
         </li>
         <li class="mb-1">
-        <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+        <button routerLink="category-list" class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
             Catégories
         </button>
         <div class="collapse" id="dashboard-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a href="#" class="link-dark rounded text-white">Sous-category 1</a></li>
-            <li><a href="#" class="link-dark rounded text-white">Sous-category 2</a></li>
-            <li><a href="#" class="link-dark rounded text-white">Sous-category 3</a></li>
-            <li><a href="#" class="link-dark rounded text-white">Sous-category 4</a></li>
+            <li><a routerLink="category/{0}" class="link-dark rounded text-white">category 1</a></li>
+            <li><a routerLink="category/{1}" class="link-dark rounded text-white">category 2</a></li>
+            <li><a routerLink="category/{2}" class="link-dark rounded text-white">category 3</a></li>
+            <li><a routerLink="category/{3}" class="link-dark rounded text-white">category 4</a></li>
+            </ul>
+        </div>
+        </li>
+        <li class="mb-1">
+        <button routerLink="sub-category-list" class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            Sous-Catégories
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a routerLink="category/{0}" class="link-dark rounded text-white">category 1</a></li>
+            <li><a routerLink="category/{1}" class="link-dark rounded text-white">category 2</a></li>
+            <li><a routerLink="category/{2}" class="link-dark rounded text-white">category 3</a></li>
+            <li><a routerLink="category/{3}" class="link-dark rounded text-white">category 4</a></li>
             </ul>
         </div>
         </li>
@@ -35,8 +48,8 @@
         </button>
         <div class="collapse" id="orders-collapse">
             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a href="#" class="link-dark rounded text-white">Bechance</a></li>
-            <li><a href="#" class="link-dark rounded text-white">linkedin</a></li>
+                <li><a href="https://www.behance.net/mi-sunjang" class="link-dark rounded text-white" target="_blank">Bechance</a></li>
+                <li><a href="https://www.linkedin.com/in/misun-jang/" class="link-dark rounded text-white" target="_blank">LinkedIn</a></li>
             </ul>
         </div>
         </li>
