@@ -29,8 +29,6 @@ export class EthComponent {
         this.data = data;
         console.log(data);
         console.log(this.data);
-
-
         for(let i = 0; i<data.length ; i++){
           this.data[i].date_eth = this.formatDate(this.data[i].date_eth);
         }
@@ -50,14 +48,10 @@ export class EthComponent {
     return` ${day}-${month}-${year}`;
   }
 
-  // Displaying the chart
   drawChart() {
     const ctx = this.chart.nativeElement.getContext('2d');
-
-    // Extract the date_eth and value_eth properties from the data array
-    const labels = this.data.map((item :any) => item.date_eth.trim()); // Trim to remove leading spaces
+    const labels = this.data.map((item :any) => item.date_eth);
     const values = this.data.map((item: any) => item.value_eth);
-
     const myChart = new Chart(ctx, {
       type: 'line',
       data: {

@@ -15,6 +15,7 @@ export class NftListComponent implements OnInit {
   nftSelect: nftTypeOfClass | undefined;
 
 
+
   constructor(private nftService: NftService, private route: ActivatedRoute) { }
 
   ngOnInit() {

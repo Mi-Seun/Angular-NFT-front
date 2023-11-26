@@ -3,15 +3,21 @@
   <div class="container">
     <!-- 로고 -->
     <a class="navbar-brand" routerLink="/">Votre Logo</a>
-    
+    <img class="logo" [src]="" >
     <!-- 네비게이션 버튼 -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" routerLink="/">Accueil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/nft-list">NFT</a>
+        <a class="nav-link" routerLink="/nft-list">Galerie</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/user-list">Utilisateurs</a>
+      </li>
+
+
+      <!--      </li>-->
       <li class="nav-item">
         <a class="nav-link" routerLink="/category-list">Categories</a>
       </li>
@@ -22,8 +28,8 @@
         <a class="nav-link" routerLink="/user-list">Utilisateurs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/**">error</a>
-      </li>
+        <a class="nav-link" routerLink="/">admin</a>
+
     </ul>
 
 
@@ -37,7 +43,12 @@
 
   <!-- 로그인/가입 옵션 -->
   <div class="navbar-nav ml-3">
-    <a class="nav-link btn btn-outline-danger" routerLink="/">Se connecter</a>
+    <a class="nav-link btn btn-outline-danger" routerLink="/login" *ngIf="!isConected()">Se connecter</a>
+    <a class="nav-link btn btn-outline-danger" (click)="logedOut()" routerLink="/" *ngIf="isConected()">Se deconnecter</a>
+    
+
+
+
     <a class="nav-link btn btn-outline-primary" routerLink="/">S'inscrire</a>
   </div>
   </div>

@@ -1,19 +1,21 @@
+<!-- nft-list.component.html -->
+
 <p>nft-list works!</p>
 
 <select>
     <option value=""></option>
 </select>
-<div class="container d-flex justify-content-center  ">
+
+<div class="container d-flex justify-content-center">
     <div class="row">
         <div class="card-group">
-            <div *ngFor="let nft of nftList">
-                <div class="card " style="width: 18rem; height: 22rem">
-                    <img src="{{ nft.pathurl }}" style="width: 80%; height: 50%" class="card-img-top" alt="NFT Image">
-                    <div class="card-body">
-                        <h5 class="card-title"> Nom : {{ nft.name_nft }}</h5>
-                        <p class="card-text">Prix ETH : {{ nft.priceeth }}</p>
-                        <p class="card-text">Description : {{ nft.description }}</p>
-                        <a [routerLink]="['/nft-detail']" [queryParams]="{id : nft.id}" class="btn btn-primary">Voir plus...</a>
+            <div *ngFor="let nft of nftList" class="col-md-3 mb-5 pb-5 m-3">
+                <div class="card h-100">
+                    <img [src]="nft?.pathurl" class="card-img-top" alt="NFT Image">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">Nom : {{ nft?.name_nft }}</h5>
+                        <p class="card-text description" >Description: {{ nft?.description | slice:0:100 }}</p>
+                        <a [routerLink]="['/nft-detail']" [queryParams]="{id: nft?.id}" class="btn btn-dark">Voir plus...</a>
                         <h5 class="card-title text-center"></h5>
                     </div>
                 </div>

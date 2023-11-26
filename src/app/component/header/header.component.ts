@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service/auth.service';
 
 
 @Component({
@@ -9,10 +10,20 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class HeaderComponent {
   title ='NFT';
 
-  // @Output() toggleSidebarEvent = new EventEmitter<void>();
+  constructor(
+    private authservice: AuthService
+  ){    
+  }
+  isConected(): boolean {
+    return this.authservice.isLogged()
+  }
 
-  // toggleSidebar() {
-  //   this.toggleSidebarEvent.emit();
-  // }
+  logedOut(){
+    this.authservice.clearToken();
+  }
+
+
+
+
 
 }

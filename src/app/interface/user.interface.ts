@@ -10,8 +10,6 @@ export interface userTypeOfClass {
     adstreet?: string,
     adcity?: string,
     adpostalcode?: string,
-
-
 }
 
 /*

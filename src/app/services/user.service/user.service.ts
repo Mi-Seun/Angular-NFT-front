@@ -8,7 +8,7 @@ import { userTypeOfClass } from 'src/app/interface/user.interface';
 })
 export class UserService {
 
-  url = 'https://127.0.0.1:8000/api/user';
+  url = 'https://127.0.0.1:8000/api/user/all';
 
   constructor(private http: HttpClient) { }
 

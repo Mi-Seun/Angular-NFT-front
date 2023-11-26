@@ -1,10 +1,10 @@
 export interface nftTypeOfClass {
-    id?: number,
-    name_nft?: string,
-    priceeth?: number,
-    pathurl?: string,
-    description?: string,
-    subcategories:[],
+      id?: number,
+      name_nft?: string,
+      priceeth?: number,
+      pathurl?: string,
+      description?: string,
+      subcategories:[],
 }
 
 

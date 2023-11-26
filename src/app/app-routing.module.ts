@@ -8,6 +8,8 @@ import { NftCreatComponent } from './pages/nft/nft-creat/nft-creat.component';
 import { UserListComponent } from './pages/user/user-list/user-list.component';
 import { SubcategoryListComponent } from './pages/sub-category/sub-category-list/sub-category-list.component';
 import { EthComponent } from './pages/eth/eth.component';
+import { LoginComponent } from './pages/login/login/login.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'user-detail', component: UserListComponent },
   { path: 'user-detail/:id', component: UserListComponent },
   { path: 'eth', component: EthComponent },
+  { path: 'login', component: LoginComponent },
+
 
 
   { path: '**', component: Error404Component }
